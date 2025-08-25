@@ -155,6 +155,24 @@
   }
 }
 
+/* 收合按鈕樣式 */
+.toggle-btn {
+  background: #fbbf24;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 9px 22px;
+  margin-bottom: 18px;
+  font-size: 1.05em;
+  cursor: pointer;
+  transition: background 0.18s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+.toggle-btn:hover {
+  background: #FFD95C;
+  color: #444;
+}
+
   </style>
 </head>
 <body>
@@ -213,7 +231,7 @@
 
 <!-- ==== Comic 作品區塊 ==== -->
 <section class="art-section">
-  <h2 class="art-title">Comic</h2>
+  <h2 class="art-title">Yellow Comic</h2>
   <div class="gallery">
     <a href="https://images.plurk.com/30BkvK9HHf82u0H5as9c5g.jpg" target="_blank" title="螢幕之外">
       <img src="https://images.plurk.com/30BkvK9HHf82u0H5as9c5g.jpg" alt="螢幕之外" style="width:500px; height:auto; max-height:500px; object-fit:contain; border-radius:8px;">
@@ -226,14 +244,17 @@
 <!-- ==== Comic 作品區塊結束 ==== -->
 
 <!-- ==== 委託洽詢區 ==== -->
+<h2>Yellow Commission</h2>
 <section id="commission" style="background:#fff; border-radius:10px; max-width:600px; margin:40px auto; box-shadow:0 2px 8px rgba(0,0,0,.08); padding:32px;">
-  <h2 style="color:#444;">委託洽詢 / Commissions</h2>
-  <p style="color:#666; font-size:1.05em;">
-    歡迎填寫下方表單與我聯繫委託繪圖相關事宜。收到您的需求後，我會儘快回覆！<br>
-    如有特殊需求也可直接私訊 <a href="yellowgaren@gmail.com">Email</a> 或 <a href="https://www.facebook.com/yellowgaren" target="_blank"">FB</a>。
-  </p>
-  <iframe src="https://forms.gle/QMSQSubjpJTtTtyJ9" width="100%" height="650" frameborder="0" marginheight="0" marginwidth="0" style="border-radius:8px; border:1px solid #ececec; background:#fafafa;" allowfullscreen>載入表單中…</iframe>
-  <div style="margin-top:18px;">
+  <button class="toggle-btn" id="commission-toggle-btn" onclick="toggleCommission()">開啟</button>
+  <div id="commission-content" style="display:none;">
+    <p style="color:#666; font-size:1.05em;">
+      歡迎填寫下方表單與我聯繫委託繪圖相關事宜。收到您的需求後，我會儘快回覆！<br>
+      如有特殊需求也可直接私訊 <a href="yellowgaren@gmail.com">Email</a> 或 <a href="https://www.facebook.com/yellowgaren" target="_blank">FB</a>。
+    </p>
+    <iframe src="https://forms.gle/QMSQSubjpJTtTtyJ9" width="100%" height="650" frameborder="0" marginheight="0" marginwidth="0" style="border-radius:8px; border:1px solid #ececec; background:#fafafa;"></iframe>
+    <div style="margin-top:18px;">
+    </div>
   </div>
 </section>
 <!-- ==== 委託洽詢區結束 ==== -->
@@ -245,6 +266,19 @@
   }
   function closeLightbox() {
     document.getElementById('lightbox').style.display = 'none';
+  }
+
+  // 開關委託洽詢區功能
+  function toggleCommission() {
+    const content = document.getElementById('commission-content');
+    const btn = document.getElementById('commission-toggle-btn');
+    if (content.style.display === 'none') {
+      content.style.display = '';
+      btn.textContent = '收起';
+    } else {
+      content.style.display = 'none';
+      btn.textContent = '開啟';
+    }
   }
 </script>
 
