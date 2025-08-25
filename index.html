@@ -52,25 +52,89 @@
       width: auto;
       height: auto;
     }
-        /* 手機版視窗大小 */
-@media (max-width: 600px) {
-  .gallery img {
-    width: 110px;
-    height: 110px;
-  }
-  .lightbox img {
-    width: auto;
-    height: auto;
-    max-width: 100vw;
-    max-height: 100vh;
-  }
-}
+    /* 手機版視窗大小 */
+    @media (max-width: 600px) {
+      .gallery img {
+        width: 110px;
+        height: 110px;
+      }
+      .lightbox img {
+        width: auto;
+        height: auto;
+        max-width: 100vw;
+        max-height: 100vh;
+      }
+      .profile-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .profile-img {
+        margin-right: 0;
+        margin-bottom: 12px;
+      }
+    }
+    /* 自我介紹排版 */
+    .profile-section {
+      max-width: 500px;
+      margin: 40px auto 40px auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+      padding: 24px 32px;
+    }
+    .profile-card {
+      display: flex;
+      align-items: center;
+      text-align: left;
+      gap: 18px;
+    }
+    .profile-img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #ffd95c;
+      background: #fffde7;
+      margin-right: 18px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+    }
+    .profile-text {
+      flex: 1;
+      color: #444;
+      font-size: 1.13em;
+      line-height: 1.7;
+    }
+    .profile-section h2 {
+      margin-top: 0;
+      color: #fbbf24;
+      font-size: 1.25em;
+      font-weight: bold;
+      letter-spacing: 0.02em;
+    }
+    hr {
+      margin: 40px 0;
+      border: none;
+      border-top: 2px solid #ccc;
+    }
   </style>
-
-
-</style>
 </head>
 <body>
+
+<!-- ==== 自我介紹區塊 ==== -->
+<div class="profile-section">
+  <div class="profile-card">
+    <img class="profile-img" src="https://images.plurk.com/5kZkS6zTRx7fVVE2Lx9Im.png" alt="Avatar">
+    <div class="profile-text">
+      <h2>關於我</h2>
+      <p>
+        嗨！我是 Yellow，一名女高中生，平時最喜歡畫圖！<br>
+        歡迎欣賞我的作品，也可以來找我委託繪製各種插圖喔 :)
+      </p>
+    </div>
+  </div>
+</div>
+<!-- ==== 自我介紹區塊結束 ==== -->
 
 <h1>Yellow Illustration</h1>
 
@@ -82,13 +146,12 @@
   <img src="https://images.plurk.com/6oQXouppOGYtVl2Yxts6un.png" alt="Sample 5" onclick="openLightbox(this.src)">
   <img src="https://images.plurk.com/2JCHATPdLMiIbwvHPWJqqn.png" alt="Sample 5" onclick="openLightbox(this.src)">
   <img src="https://images.plurk.com/3Ch1usFzqWRvybh1UIhedB.png" alt="Sample 5" onclick="openLightbox(this.src)">
-
-
-<div class="lightbox" id="lightbox" onclick="closeLightbox()">
-  <img id="lightbox-img" src="" alt="Full Size">
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="Full Size">
+  </div>
 </div>
 
-</div>
+
 
 <h1>Yellow avatar</h1>
 
@@ -105,10 +168,24 @@
   <img src="https://images.plurk.com/1fUPhkVzVvNURMtLDzeOl2.png" alt="Sample 14" onclick="openLightbox(this.src)">
   <img src="https://images.plurk.com/44S4kG94i2f1Ca3HormWyK.png" alt="Sample 14" onclick="openLightbox(this.src)">
 
-
-<div class="lightbox" id="lightbox" onclick="closeLightbox()">
-  <img id="lightbox-img" src="" alt="Full Size">
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="Full Size">
+  </div>
 </div>
+
+<!-- ==== 委託洽詢區 ==== -->
+<section id="commission" style="background:#fff; border-radius:10px; max-width:600px; margin:40px auto; box-shadow:0 2px 8px rgba(0,0,0,.08); padding:32px;">
+  <h2 style="color:#444;">委託洽詢 / Commissions Inquiry</h2>
+  <p style="color:#666; font-size:1.05em;">
+    歡迎填寫下方表單與我聯繫委託繪圖相關事宜。收到您的需求後，我會儘快回覆！<br>
+    如有特殊需求也可直接私訊 <a href="mailto:your_email@example.com">Email</a> 或 <a href="https://plurk.com/Yellowquagsire" target="_blank">Plurk</a>。
+  </p>
+  <iframe src="https://forms.gle/vifEhQEVtMURQQLh7" width="100%" height="650" frameborder="0" marginheight="0" marginwidth="0" style="border-radius:8px; border:1px solid #ececec; background:#fafafa;" allowfullscreen>載入表單中…</iframe>
+  <div style="margin-top:18px;">
+    <a href="https://forms.gle/vifEhQEVtMURQQLh7" target="_blank" style="color:#1976d2;">如果無法顯示表單，請點此開啟 Google 表單</a>
+  </div>
+</section>
+<!-- ==== 委託洽詢區結束 ==== -->
 
 <script>
   function openLightbox(src) {
@@ -119,25 +196,6 @@
     document.getElementById('lightbox').style.display = 'none';
   }
 </script>
-</div>
 
-</div>
-
-<hr style="margin: 40px 0; border: none; border-top: 2px solid #ccc;">
-
-<section id="commission" style="background:#fff; border-radius:10px; max-width:600px; margin:40px auto; box-shadow:0 2px 8px rgba(0,0,0,.08); padding:32px;">
-  <h2 style="color:#444;">委託洽詢 / Commissions Inquiry</h2>
-  <p style="color:#666; font-size:1.05em;">
-    歡迎填寫下方表單與我聯繫委託繪圖相關事宜。收到您的需求後，我會儘快回覆！<br>
-    如有特殊需求也可直接私訊 <a href="mailto:yellowgaren@gmail.com">Email</a> 或 <a href="https://www.facebook.com/yellowgaren" target="_blank">FB</a>。
-  </p>
-  <iframe src="https://forms.gle/vifEhQEVtMURQQLh7" width="100%" height="650" frameborder="0" marginheight="0" marginwidth="0" style="border-radius:8px; border:1px solid #ececec; background:#fafafa;" allowfullscreen>載入表單中…</iframe>
-  <div style="margin-top:18px;">
-    <a href="https://forms.gle/vifEhQEVtMURQQLh7" target="_blank" style="color:#1976d2;">如果無法顯示表單，請點此開啟 Google 表單</a>
-  </div>
-</section>
-
-
-  
 </body>
 </html>
