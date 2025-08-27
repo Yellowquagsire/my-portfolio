@@ -33,6 +33,17 @@
     .gallery img:hover {
       transform: scale(1.05);
     }
+    /* Yellow Avatar 縮圖更小 */
+    .avatar-gallery img {
+      width: 150px;
+      height: 150px;
+    }
+    @media (max-width: 600px) {
+      .avatar-gallery img {
+        width: 42px;
+        height: 42px;
+      }
+    }
     /* 燈箱 */
     .lightbox {
       display: none;
@@ -142,163 +153,193 @@
       filter: drop-shadow(0 2px 8px rgba(0,0,0,0.10));
     }
 
-.art-section {
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
-  border-radius: 14px;
-  margin: 40px auto;
-  padding: 32px 26px 24px 26px;
-  max-width: 1100px;
-}
-.art-title {
-  font-size: 1.45em;
-  color: #fbbf24;
-  margin-bottom: 16px;
-  letter-spacing: 0.03em;
-  font-weight: bold;
-}
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  padding: 14px 0 6px 0;
-}
-@media (max-width: 600px) {
-  .art-section {
-    padding: 13px 5px 8px 5px;
-    margin: 18px auto;
-  }
-  .gallery {
-    gap: 7px;
-    padding: 9px 0 3px 0;
-  }
-  .art-title {
-    font-size: 1.13em;
-    margin-bottom: 9px;
-  }
-}
-
-/* 收合按鈕樣式 */
-.toggle-btn {
-  background: #fbbf24;
-  color: #fff;
-  border: none;
-  border-radius: 7px;
-  padding: 9px 22px;
-  margin-bottom: 18px;
-  font-size: 1.05em;
-  cursor: pointer;
-  transition: background 0.18s;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-}
-.toggle-btn:hover {
-  background: #FFD95C;
-  color: #444;
-}
-
+    .art-section {
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+      border-radius: 14px;
+      margin: 40px auto;
+      padding: 32px 26px 24px 26px;
+      max-width: 1100px;
+    }
+    .art-title {
+      font-size: 1.45em;
+      color: #fbbf24;
+      margin-bottom: 16px;
+      letter-spacing: 0.03em;
+      font-weight: bold;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding: 14px 0 6px 0;
+    }
+    @media (max-width: 600px) {
+      .art-section {
+        padding: 13px 5px 8px 5px;
+        margin: 18px auto;
+      }
+      .gallery {
+        gap: 7px;
+        padding: 9px 0 3px 0;
+      }
+      .art-title {
+        font-size: 1.13em;
+        margin-bottom: 9px;
+      }
+    }
+    /* 收合按鈕樣式 */
+    .toggle-btn {
+      background: #fbbf24;
+      color: #fff;
+      border: none;
+      border-radius: 7px;
+      padding: 9px 22px;
+      margin-bottom: 18px;
+      font-size: 1.05em;
+      cursor: pointer;
+      transition: background 0.18s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    }
+    .toggle-btn:hover {
+      background: #FFD95C;
+      color: #444;
+    }
+    /* 切換按鈕樣式（白色） */
+    .switch-btn {
+      background: #fff;
+      color: #fbbf24;
+      border: 2px solid #fbbf24;
+      border-radius: 7px;
+      padding: 9px 22px;
+      margin: 24px 8px 0 8px;
+      font-size: 1.05em;
+      cursor: pointer;
+      transition: background 0.18s, color 0.18s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      display: inline-block;
+    }
+    .switch-btn:hover {
+      background: #FFD95C;
+      color: #444;
+      border-color: #FFD95C;
+    }
   </style>
 </head>
 <body>
 
-<!-- ==== 自我介紹區塊 ==== -->
-<div class="profile-section">
-  <div class="profile-card">
-    <!-- 社群icon區 -->
-    <div class="social-icons">
-      <a href="https://www.facebook.com/yellowgaren" target="_blank" title="Facebook" class="icon-link">
-        <!-- Facebook SVG -->
-        <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#3b5998"/><path d="M21.9 17.1l.5-3.6h-3.3V11c0-1 .5-1.9 2-1.9h1.6V6.9c-.3 0-1.5-.2-2.9-.2-3 0-4.3 1.8-4.3 4.1v2.7H11v3.6h3.5V25h4.2v-7.9h3.2z" fill="#fff"/></svg>
-      </a>
-      <a href="https://www.plurk.com/yellowquagsire" target="_blank" title="Plurk" class="icon-link">
-        <!-- Plurk SVG -->
-        <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#ff6600"/><text x="8" y="22" font-size="16" font-family="Arial" fill="#fff">P</text></svg>
-      </a>
-      <a href="https://x.com/YellowQuagsire" target="_blank" title="X(Twitter)" class="icon-link">
-        <!-- X SVG -->
-        <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#000"/><path d="M10 10h3l3.4 4.7L20 10h3l-5.1 7L23 22h-3l-3.6-5-3.6 5h-3l5.1-7-5.1-7z" fill="#fff"/></svg>
-      </a>
-    </div>
-    <img class="profile-img" src="https://images.plurk.com/5kZkS6zTRx7fVVE2Lx9Im.png" alt="Avatar">
-    <div class="profile-text">
-      <h2>關於我</h2>
-      <p>
-        嗨！我是 Yellow，一名女高中生，平時最喜歡畫圖！<br>
-        歡迎欣賞我的作品，也可以來找我委託繪製各種插圖喔 :)
-      </p>
-    </div>
-  </div>
+<!-- ==== 切換按鈕 ==== -->
+<div style="text-align:center;">
+  <button class="switch-btn" id="switch-to-gallery" onclick="showGallery()">作品瀏覽</button>
+  <button class="switch-btn" id="switch-to-commission" onclick="showCommission()">委託洽詢</button>
 </div>
-<!-- ==== 自我介紹區塊結束 ==== -->
 
-<!-- ==== 插畫區塊 ==== -->
-<section class="art-section">
-  <h2 class="art-title">Yellow Illustration</h2>
-  <div class="gallery">
-    <img src="https://images.plurk.com/6oJdcjLknlBT3g56FLXsSg.png" alt="Sample 1" onclick="openLightbox(this.src)">
-    <img src="https://images.plurk.com/5NcgRNfzR7Y7OUBLAj21QY.png" alt="Sample 2" onclick="openLightbox(this.src)">
-    <img src="https://images.plurk.com/4I37LFedQ8S5yk8UcSkj4l.png" alt="Sample 3" onclick="openLightbox(this.src)">
-    <img src="https://images.plurk.com/4tnlZeXPT0p1lmgaf6j3xR.png" alt="Sample 4" onclick="openLightbox(this.src)">
-    <img src="https://images.plurk.com/6oQXouppOGYtVl2Yxts6un.png" alt="Sample 5" onclick="openLightbox(this.src)">
-    <img src="https://images.plurk.com/2JCHATPdLMiIbwvHPWJqqn.png" alt="Sample 6" onclick="openLightbox(this.src)">
-    <img src="https://images.plurk.com/3Ch1usFzqWRvybh1UIhedB.png" alt="Sample 7" onclick="openLightbox(this.src)">
-    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-      <img id="lightbox-img" src="" alt="Full Size">
+<!-- ==== 作品瀏覽頁面 ==== -->
+<div id="gallery-page">
+  <!-- ==== 自我介紹區塊 ==== -->
+  <div class="profile-section">
+    <div class="profile-card">
+      <!-- 社群icon區 -->
+      <div class="social-icons">
+        <a href="https://www.facebook.com/yellowgaren" target="_blank" title="Facebook" class="icon-link">
+          <!-- Facebook SVG -->
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#3b5998"/><path d="M21.9 17.1l.5-3.6h-3.3V11c0-1 .5-1.9 2-1.9h1.6V6.9c-.3 0-1.5-.2-2.9-.2-3 0-4.2 1.8-4.2 4.6v2.2H11v3.6h2.6v8.8h3.5v-8.8h2.8z" fill="#fff"/></svg>
+        </a>
+        <a href="https://www.plurk.com/yellowquagsire" target="_blank" title="Plurk" class="icon-link">
+          <!-- Plurk SVG -->
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#ff6600"/><text x="8" y="22" font-size="16" font-family="Arial" fill="#fff">P</text></svg>
+        </a>
+        <a href="https://x.com/YellowQuagsire" target="_blank" title="X(Twitter)" class="icon-link">
+          <!-- X SVG -->
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#000"/><path d="M10 10h3l3.4 4.7L20 10h3l-5.1 7L23 22h-3l-3.6-5-3.6 5h-3l5.1-7-5.1-7z" fill="#fff"/></svg>
+        </a>
+      </div>
+      <img class="profile-img" src="https://images.plurk.com/5kZkS6zTRx7fVVE2Lx9Im.png" alt="Avatar">
+      <div class="profile-text">
+        <h2>關於我</h2>
+        <p>
+          嗨！我是 Yellow，一名女高中生，平時最喜歡畫圖！<br>
+          歡迎欣賞我的作品，也可以來找我委託繪製各種插圖喔 :)
+        </p>
+      </div>
     </div>
   </div>
-</section>
-
-<section class="art-section">
-  <h2 class="art-title">Yellow Avatar</h2>
-  <div class="gallery">
-    <img src="https://images.plurk.com/5dXhfwhlwlo2mbDPEoNKFp.png" alt="Sample 8" onclick="openLightbox(this.src)">
-    <img src="https://images.plurk.com/18m547UYTwbSmbyGVlBOhA.png" alt="Sample 9" onclick="openLightbox(this.src)">
-    <img src="https://images.plurk.com/4siifiXJuEhn8WtXgYar6x.png" alt="Sample 10" onclick="openLightbox(this.src)">
-    <img src="https://images.plurk.com/3y6z9EBviURMKmYe7qQ6Hr.png" alt="Sample 11" onclick="openLightbox(this.src)">
-    <img src="https://images.plurk.com/6pOQHptZ6r1oqYcKNOTVXZ.png" alt="Sample 12" onclick="openLightbox(this.src)">
-    <img src="https://images.plurk.com/3mCoTyKO8S3pCs4sPky8EH.png" alt="Sample 13" onclick="openLightbox(this.src)">
-    <img src="https://images.plurk.com/1EZ0c6dZJQGpO8lZFj5WhG.png" alt="Sample 14" onclick="openLightbox(this.src)">
-    <img src="https://images.plurk.com/DUwl6A92QhGjs5poijTnk.png" alt="Sample 15" onclick="openLightbox(this.src)">
-    <img src="https://images.plurk.com/7oABP1ctD8X4ndnV48PfkW.png" alt="Sample 16" onclick="openLightbox(this.src)">
-    <img src="https://images.plurk.com/1fUPhkVzVvNURMtLDzeOl2.png" alt="Sample 17" onclick="openLightbox(this.src)">
-    <img src="https://images.plurk.com/44S4kG94i2f1Ca3HormWyK.png" alt="Sample 18" onclick="openLightbox(this.src)">
-    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-      <img id="lightbox-img" src="" alt="Full Size">
+  <!-- ==== 插畫區塊 ==== -->
+  <section class="art-section">
+    <h2 class="art-title">Yellow Illustration</h2>
+    <div class="gallery">
+      <img src="https://images.plurk.com/6oJdcjLknlBT3g56FLXsSg.png" alt="Sample 1" onclick="openLightbox(this.src)">
+      <img src="https://images.plurk.com/5NcgRNfzR7Y7OUBLAj21QY.png" alt="Sample 2" onclick="openLightbox(this.src)">
+      <img src="https://images.plurk.com/4I37LFedQ8S5yk8UcSkj4l.png" alt="Sample 3" onclick="openLightbox(this.src)">
+      <img src="https://images.plurk.com/4tnlZeXPT0p1lmgaf6j3xR.png" alt="Sample 4" onclick="openLightbox(this.src)">
+      <img src="https://images.plurk.com/6oQXouppOGYtVl2Yxts6un.png" alt="Sample 5" onclick="openLightbox(this.src)">
+      <img src="https://images.plurk.com/2JCHATPdLMiIbwvHPWJqqn.png" alt="Sample 6" onclick="openLightbox(this.src)">
+      <img src="https://images.plurk.com/3Ch1usFzqWRvybh1UIhedB.png" alt="Sample 7" onclick="openLightbox(this.src)">
+      <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="Full Size">
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ==== Comic 作品區塊 ==== -->
-<section class="art-section">
-  <h2 class="art-title">Yellow Comic</h2>
-  <div class="gallery">
-    <a href="https://images.plurk.com/30BkvK9HHf82u0H5as9c5g.jpg" target="_blank" title="螢幕之外">
-      <img src="https://images.plurk.com/30BkvK9HHf82u0H5as9c5g.jpg" alt="螢幕之外" style="width:500px; height:auto; max-height:500px; object-fit:contain; border-radius:8px;">
-    </a>
-    <a href="https://images.plurk.com/1D4GHo4dGIxlaTZwRDgiDf.jpg" target="_blank" title="大家樂">
-      <img src="https://images.plurk.com/1D4GHo4dGIxlaTZwRDgiDf.jpg" alt="大家樂" style="width:500px; height:auto; max-height:500px; object-fit:contain; border-radius:8px;">
-    </a>
-  </div>
-</section>
-<!-- ==== Comic 作品區塊結束 ==== -->
+  <section class="art-section">
+    <h2 class="art-title">Yellow Avatar</h2>
+    <div class="gallery avatar-gallery">
+      <img src="https://images.plurk.com/5dXhfwhlwlo2mbDPEoNKFp.png" alt="Sample 8" onclick="openLightbox(this.src)">
+      <img src="https://images.plurk.com/18m547UYTwbSmbyGVlBOhA.png" alt="Sample 9" onclick="openLightbox(this.src)">
+      <img src="https://images.plurk.com/4siifiXJuEhn8WtXgYar6x.png" alt="Sample 10" onclick="openLightbox(this.src)">
+      <img src="https://images.plurk.com/3y6z9EBviURMKmYe7qQ6Hr.png" alt="Sample 11" onclick="openLightbox(this.src)">
+      <img src="https://images.plurk.com/6pOQHptZ6r1oqYcKNOTVXZ.png" alt="Sample 12" onclick="openLightbox(this.src)">
+      <img src="https://images.plurk.com/3mCoTyKO8S3pCs4sPky8EH.png" alt="Sample 13" onclick="openLightbox(this.src)">
+      <img src="https://images.plurk.com/1EZ0c6dZJQGpO8lZFj5WhG.png" alt="Sample 14" onclick="openLightbox(this.src)">
+      <img src="https://images.plurk.com/DUwl6A92QhGjs5poijTnk.png" alt="Sample 15" onclick="openLightbox(this.src)">
+      <img src="https://images.plurk.com/7oABP1ctD8X4ndnV48PfkW.png" alt="Sample 16" onclick="openLightbox(this.src)">
+      <img src="https://images.plurk.com/1fUPhkVzVvNURMtLDzeOl2.png" alt="Sample 17" onclick="openLightbox(this.src)">
+      <img src="https://images.plurk.com/44S4kG94i2f1Ca3HormWyK.png" alt="Sample 18" onclick="openLightbox(this.src)">
+    </div>
+  </section>
 
-<!-- ==== 委託洽詢區 ==== -->
-<h2>Yellow Commission</h2>
-<section id="commission" style="background:#fff; border-radius:10px; max-width:600px; margin:40px auto; box-shadow:0 2px 8px rgba(0,0,0,.08); padding:32px;">
-  <button class="toggle-btn" id="commission-toggle-btn" onclick="toggleCommission()">開啟</button>
-  <div id="commission-content" style="display:none;">
+  <!-- ==== Comic 作品區塊 ==== -->
+  <section class="art-section">
+    <h2 class="art-title">Yellow Comic</h2>
+    <div class="gallery">
+      <a href="https://images.plurk.com/30BkvK9HHf82u0H5as9c5g.jpg" target="_blank" title="螢幕之外">
+        <img src="https://images.plurk.com/30BkvK9HHf82u0H5as9c5g.jpg" alt="螢幕之外" style="width:500px; height:auto; max-height:500px; object-fit:contain; border-radius:8px;">
+      </a>
+      <a href="https://images.plurk.com/1D4GHo4dGIxlaTZwRDgiDf.jpg" target="_blank" title="大家樂">
+        <img src="https://images.plurk.com/1D4GHo4dGIxlaTZwRDgiDf.jpg" alt="大家樂" style="width:500px; height:auto; max-height:500px; object-fit:contain; border-radius:8px;">
+      </a>
+    </div>
+  </section>
+</div>
+
+<!-- ==== 委託洽詢獨立頁面 ==== -->
+<div id="commission-page" style="display:none;">
+  <h2>Yellow Commission</h2>
+  <section style="background:#fff; border-radius:10px; max-width:600px; margin:40px auto; box-shadow:0 2px 8px rgba(0,0,0,.08); padding:32px;">
     <p style="color:#666; font-size:1.05em;">
       歡迎填寫下方表單與我聯繫委託繪圖相關事宜。收到您的需求後，我會儘快回覆！<br>
-    <a href="yellowgaren@gmail.com">Email</a> 或 <a href="https://www.facebook.com/yellowgaren" target="_blank">FB</a>。
+      <a href="mailto:yellowgaren@gmail.com">Email</a> 或 <a href="https://www.facebook.com/yellowgaren" target="_blank">FB</a>。
     </p>
     <iframe src="https://forms.gle/QMSQSubjpJTtTtyJ9" width="100%" height="650" frameborder="0" marginheight="0" marginwidth="0" style="border-radius:8px; border:1px solid #ececec; background:#fafafa;"></iframe>
-    <div style="margin-top:18px;">
-    </div>
-  </div>
-</section>
-<!-- ==== 委託洽詢區結束 ==== -->
+    <div style="margin-top:18px;"></div>
+  </section>
+</div>
 
 <script>
+  // 作品/委託頁面切換
+  function showGallery() {
+    document.getElementById('gallery-page').style.display = '';
+    document.getElementById('commission-page').style.display = 'none';
+  }
+  function showCommission() {
+    document.getElementById('gallery-page').style.display = 'none';
+    document.getElementById('commission-page').style.display = '';
+  }
+  // 預設顯示作品頁
+  showGallery();
+
+  // Lightbox功能（只用一組）
   function openLightbox(src) {
     document.getElementById('lightbox-img').src = src;
     document.getElementById('lightbox').style.display = 'flex';
@@ -306,20 +347,6 @@
   function closeLightbox() {
     document.getElementById('lightbox').style.display = 'none';
   }
-
-  // 開關委託洽詢區功能
-  function toggleCommission() {
-    const content = document.getElementById('commission-content');
-    const btn = document.getElementById('commission-toggle-btn');
-    if (content.style.display === 'none') {
-      content.style.display = '';
-      btn.textContent = '收起';
-    } else {
-      content.style.display = 'none';
-      btn.textContent = '開啟';
-    }
-  }
 </script>
-
 </body>
 </html>
