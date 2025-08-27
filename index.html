@@ -18,9 +18,9 @@
     .gallery {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
-      padding: 10px;
-      justify-items: center;
+      gap: 20px;
+      justify-content: center;
+      padding: 14px 0 6px 0;
     }
     .gallery img {
       width: 300px;
@@ -33,7 +33,6 @@
     .gallery img:hover {
       transform: scale(1.05);
     }
-    /* Yellow Avatar 縮圖更小 */
     .avatar-gallery img {
       width: 150px;
       height: 150px;
@@ -43,8 +42,11 @@
         width: 42px;
         height: 42px;
       }
+      .gallery img {
+        width: 110px;
+        height: 110px;
+      }
     }
-    /* 燈箱 */
     .lightbox {
       display: none;
       position: fixed;
@@ -63,34 +65,14 @@
       width: auto;
       height: auto;
     }
-    /* 手機版視窗大小 */
     @media (max-width: 600px) {
-      .gallery img {
-        width: 110px;
-        height: 110px;
-      }
       .lightbox img {
         width: auto;
         height: auto;
         max-width: 100vw;
         max-height: 100vh;
       }
-      .profile-card {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-      .profile-img {
-        margin-right: 0;
-        margin-bottom: 12px;
-      }
-      .social-icons {
-        position: static;
-        margin-bottom: 8px;
-        justify-content: center;
-      }
     }
-    /* 自我介紹排版 */
     .profile-section {
       max-width: 500px;
       margin: 40px auto 40px auto;
@@ -134,8 +116,6 @@
       border: none;
       border-top: 2px solid #ccc;
     }
-
-    /* 社群icon樣式 */
     .social-icons {
       position: absolute;
       top: 0;
@@ -152,7 +132,6 @@
       transform: scale(1.15);
       filter: drop-shadow(0 2px 8px rgba(0,0,0,0.10));
     }
-
     .art-section {
       background: #fff;
       box-shadow: 0 2px 8px rgba(0,0,0,0.10);
@@ -168,13 +147,6 @@
       letter-spacing: 0.03em;
       font-weight: bold;
     }
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-      padding: 14px 0 6px 0;
-    }
     @media (max-width: 600px) {
       .art-section {
         padding: 13px 5px 8px 5px;
@@ -189,7 +161,6 @@
         margin-bottom: 9px;
       }
     }
-    /* 收合按鈕樣式 */
     .toggle-btn {
       background: #fbbf24;
       color: #fff;
@@ -206,7 +177,6 @@
       background: #FFD95C;
       color: #444;
     }
-    /* 切換按鈕樣式（白色） */
     .switch-btn {
       background: #fff;
       color: #fbbf24;
@@ -235,7 +205,6 @@
   <button class="switch-btn" id="switch-to-commission" onclick="showCommission()">委託洽詢</button>
 </div>
 
-
 <!-- ==== 委託洽詢獨立頁面 ==== -->
 <div id="commission-page" style="display:none;">
   <h2>Yellow Commission</h2>
@@ -244,7 +213,7 @@
       歡迎填寫下方表單與我聯繫委託繪圖相關事宜。收到您的需求後，我會儘快回覆！<br>
       <a href="mailto:yellowgaren@gmail.com">Email</a> 或 <a href="https://www.facebook.com/yellowgaren" target="_blank">FB</a>。
     </p>
-    <iframe src="https://forms.gle/wbjUv4YqyHJqckDD6" width="100%" height="650" frameborder="0" marginheight="0" marginwidth="0" style="border-radius:8px; border:1px solid #ececec; background:#fafafa;">載入中…</iframe>
+    <iframe src="https://forms.gle/wbjUv4YqyHJqckDD6" width="100%" height="650" frameborder="0" marginheight="0" marginwidth="0" style="border-radius:8px; border:1px solid #ececec; background:#fafafa;"></iframe>
     <div style="margin-top:18px;"></div>
   </section>
 </div>
@@ -257,15 +226,12 @@
       <!-- 社群icon區 -->
       <div class="social-icons">
         <a href="https://www.facebook.com/yellowgaren" target="_blank" title="Facebook" class="icon-link">
-          <!-- Facebook SVG -->
-          <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#3b5998"/><path d="M19.9 17.1l.5-3.6h-3.3V11c0-1 .5-1.9 2-1.9h1.6V6.9c-.3 0-1.5-.2-2.9-.2-3 0  ... "/></svg>
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#3b5998"/><path d="M19.9 17.1l.5-3.6h-3.3V11c0-1 .5-1.9 2-1.9h1.6V6.9c-.3 0-1.5-.2-2.9-.2-3 0-4.3 1.2-4.3 4v2.8H10v3.6h2.5v8h3.6v-8h2.7z" fill="#fff"/></svg>
         </a>
         <a href="https://www.plurk.com/yellowquagsire" target="_blank" title="Plurk" class="icon-link">
-          <!-- Plurk SVG -->
           <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#ff6600"/><text x="11" y="22" font-size="16" font-family="Arial" fill="#fff">P</text></svg>
         </a>
         <a href="https://x.com/YellowQuagsire" target="_blank" title="X(Twitter)" class="icon-link">
-          <!-- X SVG -->
           <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#000"/><text x="10.5" y="22" font-size="16" font-family="Arial" font-weight="bold" fill="#fff">X</text></svg>
         </a>
       </div>
@@ -290,9 +256,6 @@
       <img src="https://images.plurk.com/6oQXouppOGYtVl2Yxts6un.png" alt="Sample 5" onclick="openLightbox(this.src)">
       <img src="https://images.plurk.com/2JCHATPdLMiIbwvHPWJqqn.png" alt="Sample 6" onclick="openLightbox(this.src)">
       <img src="https://images.plurk.com/3Ch1usFzqWRvybh1UIhedB.png" alt="Sample 7" onclick="openLightbox(this.src)">
-      <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-        <img id="lightbox-img" src="" alt="Full Size">
-      </div>
     </div>
   </section>
 
@@ -313,42 +276,43 @@
     </div>
   </section>
 
-<!-- Comic 作品區塊 (原角，縮圖改長方形，新增文字介紹區) -->
-<section class="art-section">
-  <h2 class="art-title">Yellow Comic</h2>
-  <div class="gallery" style="flex-direction:column; gap:32px; align-items:center;">
-    <!-- 第一組：螢幕之外 -->
-    <div style="display:flex; align-items:flex-start; gap:22px; background:#fff8e1; border-radius:10px; padding:22px; box-shadow:0 2px 8px rgba(0,0,0,0.07); max-width:900px;">
-      <a href="https://images.plurk.com/30BkvK9HHf82u0H5as9c5g.jpg" target="_blank" title="螢幕之外">
-        <img src="https://images.plurk.com/30BkvK9HHf82u0H5as9c5g.jpg" alt="螢幕之外" style="width:330px; height:220px; object-fit:cover; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.09);">
-      </a>
-      <div style="flex:1; color:#4a3f2d; font-size:1.11em; line-height:1.7; padding-top:8px;">
-        <b style="font-size:1.17em; color:#fbbf24;">螢幕之外</b>
-        <div style="margin-top:8px;">
-          ──1978年的台北小戲院。銀幕之外，「後三排」上演著男人們不曾言說的慾望與祕密。
+  <!-- Comic 作品區塊 -->
+  <section class="art-section">
+    <h2 class="art-title">Yellow Comic</h2>
+    <div class="gallery" style="flex-direction:column; gap:32px; align-items:center;">
+      <!-- 第一組：螢幕之外 -->
+      <div style="display:flex; align-items:flex-start; gap:22px; background:#fff8e1; border-radius:10px; padding:22px; box-shadow:0 2px 8px rgba(0,0,0,0.07); max-width:900px;">
+        <img src="https://images.plurk.com/30BkvK9HHf82u0H5as9c5g.jpg" alt="螢幕之外" style="width:330px; height:220px; object-fit:cover; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.09); cursor:pointer;" onclick="openLightbox(this.src)">
+        <div style="flex:1; color:#4a3f2d; font-size:1.11em; line-height:1.7; padding-top:8px;">
+          <b style="font-size:1.17em; color:#fbbf24;">螢幕之外</b>
+          <div style="margin-top:8px;">
+            ──1978年的台北小戲院。銀幕之外，「後三排」上演著男人們不曾言說的慾望與祕密。
+          </div>
         </div>
       </div>
-    </div>
-    <!-- 第二組：大家樂 -->
-    <div style="display:flex; align-items:flex-start; gap:22px; background:#fff8e1; border-radius:10px; padding:22px; box-shadow:0 2px 8px rgba(0,0,0,0.07); max-width:900px;">
-      <a href="https://images.plurk.com/1D4GHo4dGIxlaTZwRDgiDf.jpg" target="_blank" title="大家樂">
-        <img src="https://images.plurk.com/1D4GHo4dGIxlaTZwRDgiDf.jpg" alt="大家樂" style="width:330px; height:220px; object-fit:cover; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.09);">
-      </a>
-      <div style="flex:1; color:#4a3f2d; font-size:1.11em; line-height:1.7; padding-top:8px;">
-        <b style="font-size:1.17em; color:#fbbf24;">大家樂</b>
-        <div style="margin-top:8px;">
-          1980年代，台灣錢淹腳目，鄭志斌在昏暗的房間中醒來，面對前來討債的債主，他的命運與所作所為也將逐步揭曉──
+      <!-- 第二組：大家樂 -->
+      <div style="display:flex; align-items:flex-start; gap:22px; background:#fff8e1; border-radius:10px; padding:22px; box-shadow:0 2px 8px rgba(0,0,0,0.07); max-width:900px;">
+        <img src="https://images.plurk.com/1D4GHo4dGIxlaTZwRDgiDf.jpg" alt="大家樂" style="width:330px; height:220px; object-fit:cover; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.09); cursor:pointer;" onclick="openLightbox(this.src)">
+        <div style="flex:1; color:#4a3f2d; font-size:1.11em; line-height:1.7; padding-top:8px;">
+          <b style="font-size:1.17em; color:#fbbf24;">大家樂</b>
+          <div style="margin-top:8px;">
+            1980年代，台灣錢淹腳目，鄭志斌在昏暗的房間中醒來，面對前來討債的債主，他的命運與所作所為也將逐步揭曉──
+          </div>
         </div>
       </div>
+      <!-- 購買按鈕區 -->
+      <div style="display:flex; gap:18px; justify-content:center; margin-top:18px;">
+        <a href="https://famistore.famiport.com.tw/famistore/users/2448013/malls/65b630a2012d68cf45ddc767" target="_blank" style="background:#fbbf24; color:#fff; border-radius:7px; padding:13px 38px; font-size:1.11em; font-weight:bold; text-decoration:none;">全家 FamiStore</a>
+        <a href="https://yellowquagsire.gumroad.com/" target="_blank" style="background:#fff; color:#fbbf24; border:2px solid #fbbf24; border-radius:7px; padding:13px 38px; font-size:1.11em; font-weight:bold; text-decoration:none;">Gumroad</a>
+      </div>
     </div>
-    <!-- 購買按鈕區 -->
-    <div style="display:flex; gap:18px; justify-content:center; margin-top:18px;">
-      <a href="https://famistore.famiport.com.tw/famistore/users/2448013/malls/65b630a2012d68cf45ddc767" target="_blank" style="background:#fbbf24; color:#fff; border-radius:7px; padding:13px 38px; font-size:1.11em; font-weight:bold; text-decoration:none; border:none; box-shadow:0 2px 8px rgba(0,0,0,0.07);">全家Fami購買</a>
-      <a href="https://yellowquagsire.gumroad.com/" target="_blank" style="background:#fff; color:#fbbf24; border:2px solid #fbbf24; border-radius:7px; padding:13px 38px; font-size:1.11em; font-weight:bold; text-decoration:none; box-shadow:0 2px 8px rgba(0,0,0,0.07);">Gumroad購買</a>
-    </div>
-  </div>
-</section>
+  </section>
+</div>
 
+<!-- 簡化版 Lightbox（全站共用一組） -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img" src="" alt="Full Size">
+</div>
 
 <script>
   // 作品/委託頁面切換
@@ -360,10 +324,9 @@
     document.getElementById('gallery-page').style.display = 'none';
     document.getElementById('commission-page').style.display = '';
   }
-  // 預設顯示作品頁
   showGallery();
 
-  // Lightbox功能（只用一組）
+  // Lightbox功能（全站共用一組）
   function openLightbox(src) {
     document.getElementById('lightbox-img').src = src;
     document.getElementById('lightbox').style.display = 'flex';
