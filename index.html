@@ -299,19 +299,41 @@
     </div>
   </section>
 
-  <!-- ==== Comic 作品區塊 ==== -->
-  <section class="art-section">
-    <h2 class="art-title">Yellow Comic</h2>
-    <div class="gallery">
+<!-- Comic 作品區塊 (原角，縮圖改長方形，新增文字介紹區) -->
+<section class="art-section">
+  <h2 class="art-title">Yellow Comic</h2>
+  <div class="gallery" style="flex-direction:column; gap:32px; align-items:center;">
+    <!-- 第一組：螢幕之外 -->
+    <div style="display:flex; align-items:flex-start; gap:22px; background:#fff8e1; border-radius:10px; padding:22px; box-shadow:0 2px 8px rgba(0,0,0,0.07); max-width:900px;">
       <a href="https://images.plurk.com/30BkvK9HHf82u0H5as9c5g.jpg" target="_blank" title="螢幕之外">
-        <img src="https://images.plurk.com/30BkvK9HHf82u0H5as9c5g.jpg" alt="螢幕之外" style="width:500px; height:auto; max-height:500px; object-fit:contain; border-radius:8px;">
+        <img src="https://images.plurk.com/30BkvK9HHf82u0H5as9c5g.jpg" alt="螢幕之外" style="width:330px; height:220px; object-fit:cover; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.09);">
       </a>
-      <a href="https://images.plurk.com/1D4GHo4dGIxlaTZwRDgiDf.jpg" target="_blank" title="大家樂">
-        <img src="https://images.plurk.com/1D4GHo4dGIxlaTZwRDgiDf.jpg" alt="大家樂" style="width:500px; height:auto; max-height:500px; object-fit:contain; border-radius:8px;">
-      </a>
+      <div style="flex:1; color:#4a3f2d; font-size:1.11em; line-height:1.7; padding-top:8px;">
+        <b style="font-size:1.17em; color:#fbbf24;">螢幕之外</b>
+        <div style="margin-top:8px;">
+          ──1978年的台北小戲院。銀幕之外，「後三排」上演著男人們不曾言說的慾望與祕密。
+        </div>
+      </div>
     </div>
-  </section>
-</div>
+    <!-- 第二組：大家樂 -->
+    <div style="display:flex; align-items:flex-start; gap:22px; background:#fff8e1; border-radius:10px; padding:22px; box-shadow:0 2px 8px rgba(0,0,0,0.07); max-width:900px;">
+      <a href="https://images.plurk.com/1D4GHo4dGIxlaTZwRDgiDf.jpg" target="_blank" title="大家樂">
+        <img src="https://images.plurk.com/1D4GHo4dGIxlaTZwRDgiDf.jpg" alt="大家樂" style="width:330px; height:220px; object-fit:cover; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.09);">
+      </a>
+      <div style="flex:1; color:#4a3f2d; font-size:1.11em; line-height:1.7; padding-top:8px;">
+        <b style="font-size:1.17em; color:#fbbf24;">大家樂</b>
+        <div style="margin-top:8px;">
+          1980年代，台灣錢淹腳目，鄭志斌在昏暗的房間中醒來，面對前來討債的債主，他的命運與所作所為也將逐步揭曉──
+        </div>
+      </div>
+    </div>
+    <!-- 購買按鈕區 -->
+    <div style="display:flex; gap:18px; justify-content:center; margin-top:18px;">
+      <a href="https://famistore.famiport.com.tw/famistore/users/2448013/malls/65b630a2012d68cf45ddc767" target="_blank" style="background:#fbbf24; color:#fff; border-radius:7px; padding:13px 38px; font-size:1.11em; font-weight:bold; text-decoration:none; box-shadow:0 2px 8px rgba(0,0,0,0.07); transition:background 0.18s;">實體本</a>
+      <a href="https://yellowquagsire.gumroad.com/" target="_blank" style="background:#fff; color:#fbbf24; border:2px solid #fbbf24; border-radius:7px; padding:13px 38px; font-size:1.11em; font-weight:bold; text-decoration:none; box-shadow:0 2px 8px rgba(0,0,0,0.07); transition:background 0.18s, color 0.18s;">電子本</a>
+    </div>
+  </div>
+</section>
 
 <!-- ==== 委託洽詢獨立頁面 ==== -->
 <div id="commission-page" style="display:none;">
