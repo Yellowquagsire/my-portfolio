@@ -73,6 +73,11 @@
         margin-right: 0;
         margin-bottom: 12px;
       }
+      .social-icons {
+        position: static;
+        margin-bottom: 8px;
+        justify-content: center;
+      }
     }
     /* 自我介紹排版 */
     .profile-section {
@@ -88,6 +93,7 @@
       align-items: center;
       text-align: left;
       gap: 18px;
+      position: relative;
     }
     .profile-img {
       width: 100px;
@@ -116,6 +122,24 @@
       margin: 40px 0;
       border: none;
       border-top: 2px solid #ccc;
+    }
+
+    /* 社群icon樣式 */
+    .social-icons {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      gap: 9px;
+      z-index: 2;
+    }
+    .icon-link svg {
+      vertical-align: middle;
+      transition: transform 0.18s;
+    }
+    .icon-link:hover svg {
+      transform: scale(1.15);
+      filter: drop-shadow(0 2px 8px rgba(0,0,0,0.10));
     }
 
 .art-section {
@@ -180,6 +204,21 @@
 <!-- ==== 自我介紹區塊 ==== -->
 <div class="profile-section">
   <div class="profile-card">
+    <!-- 社群icon區 -->
+    <div class="social-icons">
+      <a href="https://www.facebook.com/yellowgaren" target="_blank" title="Facebook" class="icon-link">
+        <!-- Facebook SVG -->
+        <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#3b5998"/><path d="M21.9 17.1l.5-3.6h-3.3V11c0-1 .5-1.9 2-1.9h1.6V6.9c-.3 0-1.5-.2-2.9-.2-3 0-4.3 1.8-4.3 4.1v2.7H11v3.6h3.5V25h4.2v-7.9h3.2z" fill="#fff"/></svg>
+      </a>
+      <a href="https://www.plurk.com/yellowquagsire" target="_blank" title="Plurk" class="icon-link">
+        <!-- Plurk SVG -->
+        <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#ff6600"/><text x="8" y="22" font-size="16" font-family="Arial" fill="#fff">P</text></svg>
+      </a>
+      <a href="https://x.com/YellowQuagsire" target="_blank" title="X(Twitter)" class="icon-link">
+        <!-- X SVG -->
+        <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#000"/><path d="M10 10h3l3.4 4.7L20 10h3l-5.1 7L23 22h-3l-3.6-5-3.6 5h-3l5.1-7-5.1-7z" fill="#fff"/></svg>
+      </a>
+    </div>
     <img class="profile-img" src="https://images.plurk.com/5kZkS6zTRx7fVVE2Lx9Im.png" alt="Avatar">
     <div class="profile-text">
       <h2>關於我</h2>
