@@ -199,11 +199,11 @@
 </head>
 <body>
 
-<!-- ==== 切換按鈕 ==== -->
+<!-- 按鈕區 -->
 <div style="text-align:center;">
   <button class="switch-btn" id="switch-to-gallery" onclick="showGallery()">作品瀏覽</button>
   <button class="switch-btn" id="switch-to-commission" onclick="showCommission()">委託洽詢</button>
-  <button class="switch-btn" id="switch-to-Muppets" onclick="Muppets()">布偶</button>
+  <button class="switch-btn" id="switch-to-Muppets" onclick="showMuppets()">布偶</button>
 </div>
 
 <!-- ==== 委託洽詢獨立頁面 ==== -->
@@ -219,7 +219,21 @@
   </section>
 </div>
 
-  <!-- ==== 布偶獨立頁面 ==== -->
+<!-- ==== 布偶獨立頁面 ==== -->
+<div id="muppets-page" style="display:none;">
+  <h2>Yellow Muppets</h2>
+  <section style="background:#fff; border-radius:10px; max-width:600px; margin:40px auto; box-shadow:0 2px 8px rgba(0,0,0,.08); padding:32px;">
+    <p style="color:#666; font-size:1.05em;">
+      這裡是布偶作品展示區，歡迎欣賞！<br>
+      <!-- 你可以加入圖片或其他內容 -->
+    </p>
+    <div class="gallery">
+      <img src="https://images.plurk.com/EXAMPLE1.png" alt="Muppet 1" onclick="openLightbox(this.src)">
+      <img src="https://images.plurk.com/EXAMPLE2.png" alt="Muppet 2" onclick="openLightbox(this.src)">
+      <!-- 更多布偶圖片 -->
+    </div>
+  </section>
+</div>
 
 <!-- ==== 作品瀏覽頁面 ==== -->
 <div id="gallery-page">
@@ -318,18 +332,26 @@
 </div>
 
 <script>
-  // 作品/委託頁面切換
+  // 作品/委託/布偶頁面切換
   function showGallery() {
     document.getElementById('gallery-page').style.display = '';
     document.getElementById('commission-page').style.display = 'none';
+    document.getElementById('muppets-page').style.display = 'none';
   }
   function showCommission() {
     document.getElementById('gallery-page').style.display = 'none';
     document.getElementById('commission-page').style.display = '';
+    document.getElementById('muppets-page').style.display = 'none';
   }
+  function showMuppets() {
+    document.getElementById('gallery-page').style.display = 'none';
+    document.getElementById('commission-page').style.display = 'none';
+    document.getElementById('muppets-page').style.display = '';
+  }
+  // 預設顯示作品瀏覽
   showGallery();
 
-  // Lightbox功能（全站共用一組）
+  // Lightbox功能不變
   function openLightbox(src) {
     document.getElementById('lightbox-img').src = src;
     document.getElementById('lightbox').style.display = 'flex';
