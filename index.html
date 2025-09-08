@@ -196,34 +196,48 @@
       border-color: #FFD95C;
     }
 @media (max-width: 600px) {
-    #muppets-page section {
-      padding: 12px !important;
-    }
-    #muppets-page .muppets-flex {
+  .comic-flex-row {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+    padding: 14px !important;
+    max-width: 100% !important;
+  }
+  .comic-flex-row img {
+    width: 100% !important;
+    max-width: 340px !important;
+    height: auto !important;
+    margin: 0 auto 12px auto !important;
+    display: block !important;
+    border-radius: 9px !important;
+  }
+  .comic-flex-row > div {
+    text-align: center !important;
+    padding-top: 0 !important;
+    font-size: 1em !important;
+  }
+}
+  @media (max-width: 600px) {
+    /* Comic 作品區塊：手機版圖文分開顯示 */
+    .comic-flex-row {
       flex-direction: column !important;
-      gap: 12px !important;
       align-items: stretch !important;
+      gap: 12px !important;
+      padding: 14px !important;
+      max-width: 100% !important;
     }
-    #muppets-page img {
+    .comic-flex-row img {
       width: 100% !important;
       max-width: 340px !important;
       height: auto !important;
-      margin: 0 auto 14px auto !important;
+      margin: 0 auto 12px auto !important;
       display: block !important;
-    }
-    #muppets-page .muppets-yellowbox {
-      padding: 14px 9px !important;
-      font-size: 1em !important;
       border-radius: 9px !important;
-      text-align: center !important;
     }
-    #muppets-page .muppets-btn {
-      display: block !important;
-      width: 100% !important;
-      max-width: 280px;
-      margin: 18px auto 0 auto !important;
+    .comic-flex-row > div {
+      text-align: center !important;
+      padding-top: 0 !important;
       font-size: 1em !important;
-      padding: 12px 8px !important;
     }
   }
 </style>
