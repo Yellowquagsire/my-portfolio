@@ -195,6 +195,20 @@
       color: #444;
       border-color: #FFD95C;
     }
+@media (max-width: 600px) {
+  .comic-flex-row {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+    padding: 13px !important;
+    max-width: 100% !important;
+  }
+  .comic-flex-row img {
+    width: 100% !important;
+    height: auto !important;
+    margin-bottom: 5px !important;
+  }
+}
   </style>
 </head>
 <body>
@@ -308,7 +322,7 @@
     <h2 class="art-title">Yellow Comic</h2>
     <div class="gallery" style="flex-direction:column; gap:32px; align-items:center;">
       <!-- 第一組：螢幕之外 -->
-      <div style="display:flex; align-items:flex-start; gap:22px; background:#fff8e1; border-radius:10px; padding:22px; box-shadow:0 2px 8px rgba(0,0,0,0.07); max-width:900px;">
+      <div class="comic-flex-row" style="display:flex; align-items:flex-start; gap:22px; background:#fff8e1; border-radius:10px; padding:22px; box-shadow:0 2px 8px rgba(0,0,0,0.07); max-width:900px;">
         <img src="https://images.plurk.com/30BkvK9HHf82u0H5as9c5g.jpg" alt="螢幕之外" style="width:330px; height:220px; object-fit:cover; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.09); cursor:pointer;" onclick="openLightbox(this.src)">
         <div style="flex:1; color:#4a3f2d; font-size:1.11em; line-height:1.7; padding-top:8px;">
           <b style="font-size:1.17em; color:#fbbf24;">螢幕之外</b>
@@ -318,7 +332,7 @@
         </div>
       </div>
       <!-- 第二組：大家樂 -->
-      <div style="display:flex; align-items:flex-start; gap:22px; background:#fff8e1; border-radius:10px; padding:22px; box-shadow:0 2px 8px rgba(0,0,0,0.07); max-width:900px;">
+      <div class="comic-flex-row" style="display:flex; align-items:flex-start; gap:22px; background:#fff8e1; border-radius:10px; padding:22px; box-shadow:0 2px 8px rgba(0,0,0,0.07); max-width:900px;">
         <img src="https://images.plurk.com/1D4GHo4dGIxlaTZwRDgiDf.jpg" alt="大家樂" style="width:330px; height:220px; object-fit:cover; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.09); cursor:pointer;" onclick="openLightbox(this.src)">
         <div style="flex:1; color:#4a3f2d; font-size:1.11em; line-height:1.7; padding-top:8px;">
           <b style="font-size:1.17em; color:#fbbf24;">大家樂</b>
